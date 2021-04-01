@@ -1,2 +1,3 @@
 # study-NestJS
-https://nomadcoders.co/nestjs-fundamentals
+
+Learning NestJS by making an enterprise ready API
