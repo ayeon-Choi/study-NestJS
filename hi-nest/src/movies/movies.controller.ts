@@ -1,4 +1,4 @@
-import { Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Controller, Delete, Get, Param, Patch, Post, Put } from '@nestjs/common';
 
 @Controller('movies')
 export class MoviesController {
@@ -19,8 +19,14 @@ export class MoviesController {
     
     @Delete("/:id")
     remove(@Param('id')movieID:string){
-        return `This will delete a movie with the id: ${movieID}`
+        return `This will delete a movie with the id: ${movieID}`;
     }
+
+    @Patch('/:id')
+    patch(@Param('id')movieId:string){
+        return `This will delete a movie with the id: ${movieId}`;
+    }
+
 
     
 }
