@@ -11,6 +11,7 @@ export class MoviesService {
 
     getOne(id:string):Movie{
         return this.movies.find(movie => movie.id === +id)
+    }
     
     deleteOne(id: string): boolean {
         this.movies.filter(movie => movie.id !== +id);
