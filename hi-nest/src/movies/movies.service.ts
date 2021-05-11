@@ -29,4 +29,11 @@ export class MoviesService {
             ...movieData,
         })
     }
+
+    update(id:string, updateData){
+        const movie = this.getOne(id);
+        this.deleteOne(id);
+        this.movies.push({...movie, ...updateData});
+
+    }
 }
