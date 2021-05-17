@@ -8,6 +8,7 @@ import {
     Body,  
     Query 
 } from '@nestjs/common';
+import { type } from 'os';
 import { CreateMovieDto } from './dto/create-movie.dto';
 import { Movie } from './entities/movie.entity';
 import { MoviesService } from './movies.service';
@@ -27,7 +28,8 @@ export class MoviesController {
     }
 
     @Get('/:id')
-    getOne(@Param('id') movieId: string): Movie{
+    getOne(@Param('id') movieId: number): Movie{
+        console.log(typeof movieId);
         return this.moviesService.getOne(movieId);
     }
 
