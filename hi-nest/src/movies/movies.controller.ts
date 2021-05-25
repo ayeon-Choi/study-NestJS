@@ -6,7 +6,9 @@ import {
     Delete,
     Patch, 
     Body,  
-    Query 
+    Query, 
+    Req,
+    Res
 } from '@nestjs/common';
 import { type } from 'os';
 import { CreateMovieDto } from './dto/create-movie.dto';
